@@ -119,16 +119,14 @@ void Inset(std::string strScript)
                     pos = pos + 1;
                     continue;
                 }
+                
             }
             else
             {
                 pos = pos;
                 continue;
-
-
             }
             
-
         }
 
         wiText.close();
