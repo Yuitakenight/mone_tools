@@ -11,7 +11,7 @@ def unpack_all_files(pack_file, output_dir):
             num_files_bytes = file.read(2) 
             num_files_bytes = num_files_bytes[::-1]
             num_files = struct.unpack('>H', num_files_bytes)[0]
-            num_files = num_files -1              
+            num_files = num_files -1               
             print("num_files:", num_files)
 
             for i in range(num_files):
@@ -22,12 +22,12 @@ def unpack_all_files(pack_file, output_dir):
                 file.seek(112+ i * 64)   
                 offset_bytes = file.read(4)
                 offset_bytes = offset_bytes[::-1]
-                offset = struct.unpack('>I', offset_bytes)[0]  
+                offset = struct.unpack('>I', offset_bytes)[0]   
 
                 file.seek(120+ i * 64)  
                 size_bytes = file.read(4)
                 size_bytes = size_bytes[::-1]
-                size = struct.unpack('>I', size_bytes)[0]    
+                size = struct.unpack('>I', size_bytes)[0]       
 
                 if size == 0:
                     zero_size_count += 1
@@ -41,7 +41,7 @@ def unpack_all_files(pack_file, output_dir):
                 output_path = os.path.join(output_dir, file_name)
                 print("Output Path:", output_path)
                 
-                
+                # 创建输出目录中的子目录
                 output_subdir = os.path.dirname(output_path)
                 if not os.path.exists(output_subdir):
                     os.makedirs(output_subdir)
