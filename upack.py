@@ -41,7 +41,7 @@ def unpack_all_files(pack_file, output_dir):
                 output_path = os.path.join(output_dir, file_name)
                 print("Output Path:", output_path)
                 
-                # 创建输出目录中的子目录
+               
                 output_subdir = os.path.dirname(output_path)
                 if not os.path.exists(output_subdir):
                     os.makedirs(output_subdir)
