@@ -58,7 +58,7 @@ def unpack_all_files(pack_file, output_dir):
         print("An error occurred during extraction:", str(e))
 
     print("Number of files with size 0:", zero_size_count)
-    print("Successfully extracted", extracted_count, "files")  # 打印成功提取的文件数量
+    print("Successfully extracted", extracted_count, "files")  
 
 pack_file = ""
 output_dir = ""
