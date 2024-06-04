@@ -1,1 +1,1 @@
-Script translation tool for mone visual novel engine.
+Script translation tool for visual novel engine.
